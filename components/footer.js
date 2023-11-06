@@ -4,7 +4,7 @@ import React from "react";
 import Container from "./container";
 
 export default function Footer() {
-  const navigation = ["Mission", "About Us", "Testimonials", "FAQ"];
+  const navigation = ["Projects", "FAQ"];
   // const legal = ["Terms", "Privacy", "Legal"];
   return (
     <div className="relative">
@@ -29,9 +29,9 @@ export default function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
+              We seek to address the challenges faced by underprivileged
+              children in Kibera, focusing on providing wholesome meals aiming
+              to bring about broader positive changes in their lives.
             </div>
 
             {/* <div className="mt-5">

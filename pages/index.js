@@ -11,8 +11,14 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 const Home = () => {
+  const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    setTheme("light");
+  }, []);
   return (
     <>
       <Head>
@@ -27,16 +33,16 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle
-        id="Mission"
-        pretitle="Our Mission"
-        title="Our core mission"
+        id="Projects"
+        pretitle="Our Projects"
+        title="We Help Around the local community "
       >
         The initiative in Kibera aims to provide nutritious lunches and
         refreshments to children following their practice football matches.
       </SectionTitle>
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
-      <SectionTitle
+      <Benefits data={benefitTwo} />
+      <Benefits imgPos="right" data={benefitOne} />
+      {/* <SectionTitle
         id="About Us"
         pretitle="About Us"
         title="Who are we and what do we do?"
@@ -45,8 +51,8 @@ const Home = () => {
         Analysts says a landing page with video has 3% more conversion rate. So,
         don&apos;t forget to add one. Just like this.
       </SectionTitle>
-      <Video />
-      <SectionTitle
+      <Video /> */}
+      {/* <SectionTitle
         id="Testimonials"
         pretitle="Testimonials"
         title="Here's what our people say"
@@ -54,11 +60,12 @@ const Home = () => {
         Testimonails is a great way to increase the brand trust and awareness.
         Use this section to highlight your popular customers.
       </SectionTitle>
-      <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
-      </SectionTitle>
+      <Testimonials /> */}
+      <SectionTitle
+        id="FAQ"
+        pretitle="FAQ"
+        title="Frequently Asked Questions"
+      ></SectionTitle>
       <Faq />
       {/* <Cta /> */}
       <Footer />

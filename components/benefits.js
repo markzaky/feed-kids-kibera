@@ -6,7 +6,7 @@ const Benefits = (props) => {
   const { data } = props;
   return (
     <>
-      <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
+      <Container className="flex flex-wrap mb-10 lg:gap-10 lg:flex-nowrap ">
         <div
           className={`flex items-center justify-center w-full lg:w-1/2 ${
             props.imgPos === "right" ? "lg:order-1" : ""
@@ -36,17 +36,52 @@ const Benefits = (props) => {
                 {data.title}
               </h3>
 
-              <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+              <p className="max-w-2xl py-4  leading-normal text-gray-500 dark:text-gray-300">
                 {data.desc}
               </p>
+              {data.requirements &&
+                data.requirements.map((requirement, index) => (
+                  <p
+                    className="max-w-2xl py-1 pl-2 leading-normal text-gray-500 dark:text-gray-300"
+                    key={index}
+                  >
+                    -{requirement.title}
+                  </p>
+                ))}
+              {data.desc_1 && (
+                <p className="max-w-2xl py-4  leading-normal text-gray-500 dark:text-gray-300">
+                  {data.desc_1}
+                </p>
+              )}
+              {data.desc_2 && (
+                <p className="max-w-2xl py-4  leading-normal text-gray-500 dark:text-gray-300">
+                  {data.desc_2}
+                </p>
+              )}
+              {data.isActive && (
+                <>
+                  {" "}
+                  <div className="flex flex-col items-end space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
+                    <a
+                      href="https://wa.me/254714014439"
+                      target="_blank"
+                      rel="noopener"
+                      className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-500 rounded-md "
+                    >
+                      Learn More
+                    </a>
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="w-full mt-5">
-              {data.bullets.map((item, index) => (
-                <Benefit key={index} title={item.title} icon={item.icon}>
-                  {item.desc}
-                </Benefit>
-              ))}
+              {data.bullets &&
+                data.bullets.map((item, index) => (
+                  <Benefit key={index} title={item.title} icon={item.icon}>
+                    {item.desc}
+                  </Benefit>
+                ))}
             </div>
           </div>
         </div>

@@ -31,26 +31,21 @@ const Faq = () => {
       </div>
     </Container>
   );
-}
+};
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
-  },
-  {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
-  },
-  {
-    question: "What is your refund policy? ",
+    question: "How do I donate?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "There are many ways to contribute to the project, including food,football gear, footballs, purchasing our products or anything you can contribute we are open. Please reach through our Whatsapp for more info.",
   },
   {
-    question: "Do you offer technical support? ",
-    answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+    question: "Can I Volunteer? ",
+    answer: "Yes, Please reach out to us through our whatsapp.",
+  },
+  {
+    question: "What can I donate? ",
+    answer: "Food, Football gear and footballs are all accepted as donations.",
   },
 ];
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
 const Navbar = () => {
-  const navigation = ["Mission", "About Us", "Testimonials", "FAQ"];
+  const navigation = ["Projects", "FAQ"];
 
   return (
     <div className="w-full">
@@ -17,13 +17,13 @@ const Navbar = () => {
                 <Link href="/">
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>
-                      <Image
+                      {/* <Image
                         src="/img/logo.svg"
                         alt="N"
                         width="32"
                         height="32"
                         className="w-8"
-                      />
+                      /> */}
                     </span>
                     <span>Feed Kids Kibera</span>
                   </span>
@@ -65,12 +65,12 @@ const Navbar = () => {
                         {item}
                       </Link>
                     ))}
-                    <Link
+                    {/* <Link
                       href="/"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                     >
                       Get Started
-                    </Link>
+                    </Link> */}
                   </>
                 </Disclosure.Panel>
               </div>
@@ -102,7 +102,7 @@ const Navbar = () => {
             Get Started
           </Link> */}
 
-          {/* <ThemeChanger /> */}
+          <ThemeChanger />
         </div>
       </nav>
     </div>

@@ -12,7 +12,7 @@ const ThemeChanger = () => {
 
   return (
     <div className="flex items-center">
-      {theme === "light" ? (
+      {theme === "dark" ? (
         <button
           onClick={() => setTheme("light")}
           className="text-gray-300 rounded-full outline-none focus:outline-none"
