@@ -16,10 +16,10 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>Feed Kids Kibera</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Feed Kids Kibera The initiative in Kibera aims to provide nutritious lunches and refreshments to children following their practice football matches."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -27,25 +27,30 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        id="Mission"
+        pretitle="Our Mission"
+        title="Our core mission"
+      >
+        The initiative in Kibera aims to provide nutritious lunches and
+        refreshments to children following their practice football matches.
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
+        id="About Us"
+        pretitle="About Us"
+        title="Who are we and what do we do?"
+      >
         This section is to highlight a promo or demo video of your product.
         Analysts says a landing page with video has 3% more conversion rate. So,
         don&apos;t forget to add one. Just like this.
       </SectionTitle>
       <Video />
       <SectionTitle
+        id="Testimonials"
         pretitle="Testimonials"
-        title="Here's what our customers said">
+        title="Here's what our people say"
+      >
         Testimonails is a great way to increase the brand trust and awareness.
         Use this section to highlight your popular customers.
       </SectionTitle>
@@ -55,11 +60,11 @@ const Home = () => {
         conversion rate as well as support or chat requests.
       </SectionTitle>
       <Faq />
-      <Cta />
+      {/* <Cta /> */}
       <Footer />
       <PopupWidget />
     </>
   );
-}
+};
 
 export default Home;

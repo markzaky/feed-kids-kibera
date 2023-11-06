@@ -6,9 +6,13 @@ const SectionTitle = (props) => {
     <Container
       className={`flex w-full flex-col mt-4 ${
         props.align === "left" ? "" : "items-center justify-center text-center"
-      }`}>
+      }`}
+    >
       {props.pretitle && (
-        <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+        <div
+          id={props.id}
+          className="text-sm font-bold tracking-wider text-indigo-600 uppercase"
+        >
           {props.pretitle}
         </div>
       )}
@@ -26,6 +30,6 @@ const SectionTitle = (props) => {
       )}
     </Container>
   );
-}
+};
 
 export default SectionTitle;
